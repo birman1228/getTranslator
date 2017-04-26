@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">getTranslator</string>
+    <string name="title_home">Home</string>
+    <string name="title_translate">Перевод</string>
+    <string name="title_history">История</string>
+    <string name="title_favorites">Избранное</string>
+    <string name="delete_record">Удалить запись</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6C8CD5</color>
+    <color name="colorPrimaryDark">#2A4480</color>
+    <color name="colorAccent">#860049</color>
+    <color name="borderColorClick">#6C8CD5</color>
+    <color name="textMenu">@android:color/background_dark</color>
+
+
+</resources>

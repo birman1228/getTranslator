@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.evgen.myfirsttranslator.MainActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/swap"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/swap_btn"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"/>
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/borderSize"
+        android:id="@+id/separatorTop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        android:background="@color/borderColorClick"/>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <View
+            android:layout_width="@dimen/borderSize"
+            android:layout_height="match_parent"
+            android:id="@+id/separatorLeft"
+            android:visibility="visible"
+            android:background="@color/borderColorClick"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp">
+            <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            >
+                <com.example.evgen.myfirsttranslator.CustomView.ActionEditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|left"
+                    android:hint="Введите текст"
+                    android:background="#00000000"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:inputType="textMultiLine"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:imeOptions="actionGo"/>
+
+            </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+                <ImageView
+                    android:id="@+id/favourite_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/favourite_btn_unpressed"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/clear_btn"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/clear_btn"
+                    android:clickable="true"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/borderSize"
+            android:layout_height="match_parent"
+            android:id="@+id/separatorRight"
+            android:visibility="visible"
+            android:background="@color/borderColorClick"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/borderSize"
+        android:id="@+id/separatorBottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="visible"
+        android:background="@color/borderColorClick"/>
+
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:text=""
+                android:textSize="20sp" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemTextColor="@color/textMenu"
+        app:itemIconTint="@color/textMenu"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/navigation" />
+
+
+
+
+</LinearLayout>
